@@ -13,27 +13,29 @@ const NFTs=[]
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT (_name, _eyecolor, _shirttype, _bling) {
+function mintNFT (_UID, _Name, _Course, _Department) {
     const NFT={
-        "name": _name,
-        "eyecolor":_eyecolor,
-        "shirttype":_shirttype,
-        "bling":_bling
+      "UID":_UID,
+        "Name": _Name,
+        "Course":_Course,
+        "Department":_Department
     }
    NFTs.push(NFT);
-   console.log("Minted: "+_name);
+   console.log("Minted: "+_Name);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
     for(let i=0;i< NFTs.length; i++){
-        console.log("\nID: \t\t\t\t"+(i+1));
-        console.log("Name: \t\t\t"+NFTs[i].name);
-        console.log("Eyecolor: \t"+NFTs[i].eyecolor);
+        console.log("\nID: \t\t"+(i+1));
+        console.log("UID:   \t\t"+NFTs[i].UID);
 
-        console.log("Shirttype: \t"+NFTs[i].shirttype);
-        console.log("Bling: \t\t\t"+NFTs[i].bling);
+        console.log("Name:   \t"+NFTs[i].Name);
+        console.log("Eyecolor: \t"+NFTs[i].Course);
+
+        console.log("Shirttype: \t"+NFTs[i].Department);
+        
     }
 }
 
@@ -43,9 +45,9 @@ function getTotalSupply() {
 }
 
 // call your functions below this line
-mintNFT("Ananya", "Brown", "Black", "Key chain");
-mintNFT("Swayam", "Brown", "Bage", "Key chain");
-mintNFT("Darshita", "Black", "White", "Key chain");
-mintNFT("Dakshita", "Blue", "Blue", "Key chain");
+mintNFT("21BCS5900", "Ananya", "BE", "Computer Science");
+mintNFT("21BA5842","Swayam", "BA", "Home Science");
+mintNFT("21MCA5890","Darshita", "MCA", "Computer Applications");
+mintNFT("21MBBS8908","Dakshita", "MBBS", "Microbiology");
 listNFTs();
 getTotalSupply();
