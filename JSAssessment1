@@ -32,9 +32,9 @@ function listNFTs () {
         console.log("UID:   \t\t"+NFTs[i].UID);
 
         console.log("Name:   \t"+NFTs[i].Name);
-        console.log("Eyecolor: \t"+NFTs[i].Course);
+        console.log("Course: \t"+NFTs[i].Course);
 
-        console.log("Shirttype: \t"+NFTs[i].Department);
+        console.log("Department: "+NFTs[i].Department);
         
     }
 }
